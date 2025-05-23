@@ -1,4 +1,5 @@
-@extends('backend.master')
+@extends('backend.main')
+@section('title','Contact')
 @section('content')
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
@@ -11,9 +12,9 @@
                 <form action="{{route('store.contact')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label class="mb-1">Mail <span class="text-danger">*</span></label>
-                        <input class="form-control" type="email" name="mail" value="{{old('mail')}}">
-                        @error('mail')
+                        <label class="mb-1">Email <span class="text-danger">*</span></label>
+                        <input class="form-control" type="email" name="email" value="{{old('email')}}">
+                        @error('email')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
@@ -28,7 +29,7 @@
 
                     <div class="mb-3">
                         <label class="mb-1">Address <span class="text-danger">*</span></label>
-                        <input class="form-control" type="text" name="address" value="{{old('address')}}">
+                        <input class="form-control" id="address" type="text" name="address" value="{{old('address')}}">
                         @error('address')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror

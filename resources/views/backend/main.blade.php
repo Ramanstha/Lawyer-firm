@@ -7,7 +7,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>Flyway Visas | @yield('title')</title>
+    <title>Lawyer | @yield('title')</title>
     <!-- Favicon -->
     <link href="{{asset('backend/img/sekuwa.png')}}" rel="icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -40,10 +40,10 @@
         <!-- Sidebar Start -->
         @include('backend.layout.sidebar')
         <!-- Sidebar End -->
-
+        
         <div class="content">
-
             @include('backend.layout.header')
+
             @yield('content')
 
             <!-- Footer Start -->

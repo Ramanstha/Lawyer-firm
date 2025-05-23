@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('logo');
             $table->longText('description');
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }

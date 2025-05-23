@@ -1,65 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
     <meta charset="utf-8">
-    <title>Flyway Visas @yield('title') </title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Lawyer Firm</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/img/favicon.ico')}}">
 
-    <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="{{asset('frontend/lib/animate/animate.min.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/slicknav.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 </head>
 
 <body>
 
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{{asset('frontend/img/logo/loder.png')}}" alt="">
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Spinner End -->
-    @include('frontend.layout.header')
-
-    @yield('content')
-
-    @include('frontend.layout.footer')
+    <!-- Preloader Start -->
+    <Header>
+        <!-- Header Start -->
+        @include('frontend.layout.header')
+        <!-- Header End -->
+    </Header>
     
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+    <main>
+    <!-- Content Start -->
+    @yield('content')
+    <!-- Content End -->
+    </main>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('frontend/lib/wow/wow.min.js')}}"></script>
-    <script src="{{asset('frontend/lib/easing/easing.min.js')}}"></script>
-    <script src="{{asset('frontend/lib/waypoints/waypoints.min.js')}}"></script>
-    <script src="{{asset('frontend/lib/counterup/counterup.min.js')}}"></script>
-    <script src="{{asset('frontend/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <footer>
+    <!--Footer Start -->
+    @include('frontend.layout.footer')
+    <!-- Footer End -->
+    </footer>
 
-    <!-- Template Javascript -->
+    <!-- All JS Custom Plugins Link Here here -->
+    <script src="{{asset('frontend/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="{{asset('frontend/js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{asset('frontend/js/popper.min.js')}}"></script>
+    <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="{{asset('frontend/js/jquery.slicknav.min.js')}}"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('frontend/js/slick.min.js')}}"></script>
+
+    <!-- One Page, Animated-HeadLin -->
+    <script src="{{asset('frontend/js/wow.min.js')}}"></script>
+    <script src="{{asset('frontend/js/animated.headline.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.magnific-popup.js')}}"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="{{asset('frontend/js/jquery.scrollUp.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.sticky.js')}}"></script>
+
+    <!-- counter , waypoint -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.counterup.min.js')}}"></script>
+
+    <!-- counter -->
+    <script src="{{asset('frontend/js/contact.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.form.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('frontend/js/mail-script.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.ajaxchimp.min.js')}}"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="{{asset('frontend/js/plugins.js')}}"></script>
     <script src="{{asset('frontend/js/main.js')}}"></script>
+
 </body>
 
 </html>

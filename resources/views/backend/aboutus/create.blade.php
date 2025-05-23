@@ -28,7 +28,7 @@
 
                     <div class="mb-3">
                         <label class="mb-1">Description <span class="text-danger">*</span></label>
-                        <textarea class="form-control" style="height: 150px;" name="description"
+                        <textarea class="form-control" id="description" style="height: 150px;" name="description"
                             value="{{old('description')}}">{{old('description')}}</textarea>
                         @error('description')
                         <span class="text-danger">{{ $message }}</span>
@@ -40,4 +40,8 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('description');
+</script>
 @endsection

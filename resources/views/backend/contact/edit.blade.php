@@ -1,4 +1,5 @@
-@extends('backend.master')
+@extends('backend.main')
+@section('title','Contact')
 @section('content')
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
@@ -11,9 +12,9 @@
                 <form action="{{route('update.contact',$data->id)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label class="mb-1">Mail <span class="text-danger">*</span></label>
-                        <input class="form-control" type="email" name="mail" value="{{$data->mail   }}">
-                        @error('mail')
+                        <label class="mb-1">Email <span class="text-danger">*</span></label>
+                        <input class="form-control" type="email" name="email" value="{{$data->email   }}">
+                        @error('email')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
@@ -28,7 +29,7 @@
 
                     <div class="mb-3">
                         <label class="mb-1">Address <span class="text-danger">*</span></label>
-                        <input class="form-control" type="text" name="address" value="{{$data->address}}">
+                        <input class="form-control" id="address" type="text" name="address" value="{{$data->address}}">
                         @error('address')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -47,4 +48,8 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('address');
+</script>
 @endsection
